@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="simple.js" ></script>
+    <title>테스트</title>
+    <div id="viewdiv"></div>
+    <a href="./test.html">페이지이동</a>
+</head>
+<body>
+<script>
+    try{
+        var a = $.simpleTestjs.save();
+        console.log(a);
+        $.each(a, function( index, value ) {
+            $("#viewdiv").append(index+":"+value+"<br/>");
+        });
+    }catch (e) {
+
+    }
+</script>
+</body>
+</html>
